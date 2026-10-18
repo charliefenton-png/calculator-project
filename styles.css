@@ -1,0 +1,65 @@
+.calcContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(200, 197, 197);
+  height: 500px;
+  width: 300px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: groove 1em rgb(49, 48, 48);
+  border-radius: 2em;    
+}
+
+
+.calcWindow {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  margin-top: 25px;
+  border-radius: 2em;
+  border-color: black;
+  text-align: right;    
+}
+
+
+.allButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;  
+}
+
+
+.buttonsOne {
+  display: flex;    
+}
+
+
+.buttonsTwo {
+  display: flex;    
+}
+
+
+.buttonsThree {
+  display: flex;    
+}
+
+
+.buttonZero {
+  display: flex;    
+}
+
+.operatorSymbols {
+  font-weight: bolder;
+  font-size: x-large;
+  margin-top: 30px;  
+}
+
+
+button {
+  height: 50px;
+  width: 50px;
+  font-size: larger;
+  border-radius: 10px;  
+}
