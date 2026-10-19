@@ -38,6 +38,16 @@ function operate(operator, a, b) {
   }
 }
 
+const digitButton = document.querySelector(".digit");
+
+
+function FirstNum(firstNumber) {
+
+}
+  
+
+
+
 
 console.log(operate("+", 3, 5));
 

@@ -59,8 +59,16 @@
 
 .buttonZero {
   display: flex;
-  margin-top: 4px;    
+  margin-top: 4px;
+  gap: 10px;   
 }
+
+
+.clear {
+  font-size: medium;
+  padding-right: 3px;
+}
+
 
 .operatorSymbols {
   font-weight: bolder;
