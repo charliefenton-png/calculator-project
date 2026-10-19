@@ -1,6 +1,6 @@
-let firstNum = 0
-let secondNum = 1
-let operators = x
+let firstNumber;
+let operator;
+let secondNumber;
 
 
 const add = function(a, b) {
@@ -23,17 +23,25 @@ const divide = function(a, b) {
 }
 
 
-const operate = function() {
-  
+function operate(operator, a, b) {
+  switch (operator) {
+    case "+":
+      return add(a, b);
+    case "-":
+      return subtract(a, b);
+    case "*":
+      return multiply(a, b);
+    case "/":
+      return divide(a, b);
+    default:
+      return null; 
+  }
 }
 
 
+console.log(operate("+", 3, 5));
 
 
 
-console.log(add(2, 2))
-console.log(subtract(10, 5))
-console.log(multiply(2, 5))
-console.log(divide(10, 2))
 
 
