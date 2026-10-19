@@ -38,18 +38,19 @@ function operate(operator, a, b) {
   }
 }
 
-const digitButton = document.querySelector(".digit");
+const digitButton = document.querySelectorAll('.digit')
+digitButton.forEach(function(el){
+  el.addEventListener('click', function () {
+    if (id = "one")
+      console.log(7);
+    else console.log(3)
+  });
+});
 
 
-function FirstNum(firstNumber) {
-
-}
-  
 
 
 
-
-console.log(operate("+", 3, 5));
 
 
 
