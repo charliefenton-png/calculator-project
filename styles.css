@@ -32,22 +32,34 @@
 
 
 .buttonsOne {
-  display: flex;    
+  display: flex;
+  gap: 10px;    
 }
 
 
 .buttonsTwo {
-  display: flex;    
+  display: flex;
+  gap: 10px;    
 }
 
 
 .buttonsThree {
-  display: flex;    
+  display: flex;
+  gap: 10px;    
+}
+
+
+
+.buttonsThreeRows {
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
 
 .buttonZero {
-  display: flex;    
+  display: flex;
+  margin-top: 4px;    
 }
 
 .operatorSymbols {
