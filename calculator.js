@@ -38,8 +38,8 @@ function operate(operator, a, b) {
   }
 }
 
-const digitButton = document.querySelectorAll('.digit')
-digitButton.forEach(function(el){
+const digitButtonOne = document.querySelectorAll('.digit')
+digitButtonOne.forEach(function(el){
   let firstNumber = 0;
   el.addEventListener('click', function () {    
   firstNumber = this.value
@@ -50,6 +50,19 @@ digitButton.forEach(function(el){
   });
 });
 
+
+
+const digitButtonTwo = document.querySelectorAll('.digit')
+digitButtonTwo.forEach(function(el){
+  let secondNumber = 0;
+  el.addEventListener('click', function () {    
+  secondNumber = this.value
+  checkValue();
+  function checkValue() {
+  console.log(secondNumber)
+}
+  });
+});
 
 
 
