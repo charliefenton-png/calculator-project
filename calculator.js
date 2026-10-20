@@ -40,10 +40,13 @@ function operate(operator, a, b) {
 
 const digitButton = document.querySelectorAll('.digit')
 digitButton.forEach(function(el){
-  el.addEventListener('click', function () {
-    if (id = "one")
-      console.log(7);
-    else console.log(3)
+  let a = 0;
+  el.addEventListener('click', function () {    
+  a = this.value
+  checkValue();
+  function checkValue() {
+  console.log(a)
+}
   });
 });
 
