@@ -42,7 +42,8 @@ const digitButtonOne = document.querySelectorAll('.digit')
 digitButtonOne.forEach(function(el){
   let firstNumber = 0;
   el.addEventListener('click', function () {    
-  firstNumber = this.value
+  document.getElementById('input').value = firstNumber
+    firstNumber = this.value
   checkValue();
   function checkValue() {
   console.log(firstNumber)
@@ -66,7 +67,7 @@ digitButtonTwo.forEach(function(el){
 
 
 
-
+const input = document.querySelector("input");
 
 
 
