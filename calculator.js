@@ -38,36 +38,19 @@ function operate(operator, a, b) {
   }
 }
 
-const digitButtonOne = document.querySelectorAll('.digit')
-digitButtonOne.forEach(function(el){
-  let firstNumber = 0;
-  el.addEventListener('click', function () {    
-  document.getElementById('input').value = firstNumber
-    firstNumber = this.value
-  checkValue();
-  function checkValue() {
-  console.log(firstNumber)
-}
+const display = document.getElementById('input');
+let displayValue = '0';
+
+document.querySelectorAll('.digit').forEach(function (button) {
+  button.addEventListener('click', function () {
+    if (displayValue === '0') {
+      displayValue = this.value;
+    } else {
+      displayValue += this.value;
+    }
+    display.value = displayValue;
   });
 });
-
-
-
-const digitButtonTwo = document.querySelectorAll('.digit')
-digitButtonTwo.forEach(function(el){
-  let secondNumber = 0;
-  el.addEventListener('click', function () {    
-  secondNumber = this.value
-  checkValue();
-  function checkValue() {
-  console.log(secondNumber)
-}
-  });
-});
-
-
-
-const input = document.querySelector("input");
 
 
 
