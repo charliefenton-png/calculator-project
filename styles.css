@@ -83,3 +83,8 @@ button {
   font-size: larger;
   border-radius: 10px;  
 }
+
+
+input {
+  font-size: large;
+}
