@@ -38,6 +38,23 @@ function operate(operator, a, b) {
   }
 }
 
+
+
+const digitButtonOne = document.querySelectorAll('.digit')
+digitButtonOne.forEach(function(el){
+  let firstNumber = 0;
+  el.addEventListener('click', function () {    
+  document.getElementById('input').value = firstNumber
+    firstNumber = this.value
+  checkValue();
+  function checkValue() {
+  console.log(firstNumber)
+}
+  });
+});
+
+
+
 const display = document.getElementById('input');
 let displayValue = '0';
 
@@ -51,6 +68,18 @@ document.querySelectorAll('.digit').forEach(function (button) {
     display.value = displayValue;
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
