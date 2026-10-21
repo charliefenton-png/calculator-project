@@ -1,4 +1,3 @@
-let firstNumber;
 let operator;
 let secondNumber;
 
@@ -56,19 +55,20 @@ digitButtonOne.forEach(function(el){
 const operatorButtons = document.querySelectorAll('.operatorSymbol')
 operatorButtons.forEach(function(el){
   let operator = 0;
+  let firstNumber; 
+
   el.addEventListener('click', function () {    
-  document.getElementById('input').value = operator
+    document.getElementById('input').value = operator
     operator = this.value
-    Number(displayValue) = firstNumber 
-  checkValue();
-  function checkValue() {
-  console.log(operator)
-  console.log(firstNumber)
-}
+    firstNumber = Number(displayValue); 
+    
+    checkValue();
+    function checkValue() {
+      console.log(operator)
+      console.log(firstNumber)
+    }
   });
 });
-
-
 
 const display = document.getElementById('input');
 let displayValue = '0';
