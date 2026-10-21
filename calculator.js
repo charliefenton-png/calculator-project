@@ -2,7 +2,6 @@ let firstNumber;
 let operator;
 let secondNumber;
 
-
 const add = function(a, b) {
   return (a + b)
 };
@@ -29,15 +28,14 @@ function operate(operator, a, b) {
       return add(a, b);
     case "-":
       return subtract(a, b);
-    case "*":
+    case "x":
       return multiply(a, b);
-    case "/":
+    case "÷":
       return divide(a, b);
     default:
       return null; 
   }
 }
-
 
 
 const digitButtonOne = document.querySelectorAll('.digit')
@@ -48,6 +46,23 @@ digitButtonOne.forEach(function(el){
     firstNumber = this.value
   checkValue();
   function checkValue() {
+  console.log(firstNumber)
+}
+  });
+});
+
+
+
+const operatorButtons = document.querySelectorAll('.operatorSymbol')
+operatorButtons.forEach(function(el){
+  let operator = 0;
+  el.addEventListener('click', function () {    
+  document.getElementById('input').value = operator
+    operator = this.value
+    Number(displayValue) = firstNumber 
+  checkValue();
+  function checkValue() {
+  console.log(operator)
   console.log(firstNumber)
 }
   });
