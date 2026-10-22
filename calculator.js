@@ -80,3 +80,16 @@ document.querySelector('.equals').addEventListener('click', function () {
   operator = null;
   waitingForSecondNumber = true;       // next digit starts a new calculation
 });
+
+
+
+document.querySelector('.clear').addEventListener('click', function () {
+  displayValue = 0
+  firstNumber = null;
+  operator = null;
+  waitingForSecondNumber = false;  
+
+
+});
+
+
