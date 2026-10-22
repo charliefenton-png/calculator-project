@@ -82,7 +82,6 @@ document.querySelector('.equals').addEventListener('click', function () {
 });
 
 
-
 document.querySelector('.clear').addEventListener('click', function () {
   displayValue = '0';
   display.value = displayValue;   // this line is what updates the screen
@@ -90,5 +89,12 @@ document.querySelector('.clear').addEventListener('click', function () {
   operator = null;
   waitingForSecondNumber = false;
 });
+
+document.querySelector('.period').addEventListener('click', function () {
+  if (!display.value.includes(".")) {
+    display.value += ".";
+  }
+});
+
 
 
