@@ -90,11 +90,17 @@ document.querySelector('.clear').addEventListener('click', function () {
   waitingForSecondNumber = false;
 });
 
+function roundResult(number) {
+  return Math.round(number * 1000) / 1000
+}
+
+
 document.querySelector('.period').addEventListener('click', function () {
-  if (!display.value.includes(".")) {
-    display.value += ".";
+  if (waitingForSecondNumber) {
+    displayValue = '0.';             // e.g. after "5 +", pressing . starts "0."
+    waitingForSecondNumber = false;
+  } else if (!displayValue.includes('.')) {
+    displayValue += '.';
   }
+  display.value = displayValue;
 });
-
-
-
