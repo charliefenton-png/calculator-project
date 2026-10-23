@@ -14,7 +14,14 @@ const multiply = function(a, b) {
 
 
 const divide = function(a, b) {
-    return (a / b)
+  if (b === 0)
+    alert("You can't divide by 0!")    
+  else return (a / b)
+}
+
+
+function roundResult(number) {
+  return Math.round(number * 1000) / 1000
 }
 
 
@@ -89,10 +96,6 @@ document.querySelector('.clear').addEventListener('click', function () {
   operator = null;
   waitingForSecondNumber = false;
 });
-
-function roundResult(number) {
-  return Math.round(number * 1000) / 1000
-}
 
 
 document.querySelector('.period').addEventListener('click', function () {
