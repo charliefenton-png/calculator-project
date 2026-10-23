@@ -14,11 +14,12 @@ const multiply = function(a, b) {
 
 
 const divide = function(a, b) {
-  if (b === 0)
-    alert("You can't divide by 0!")    
-  else return (a / b)
-}
-
+  if (b === 0) {
+    alert("You can't divide by 0!");
+    return null;
+  }
+  return a / b;
+};
 
 function roundResult(number) {
   return Math.round(number * 1000) / 1000
@@ -80,14 +81,25 @@ document.querySelectorAll('.operatorSymbol').forEach(function (button) {
 
 document.querySelector('.equals').addEventListener('click', function () {
   if (operator === null || waitingForSecondNumber) return;
-  const result = operate(operator, firstNumber, Number(displayValue));
-  displayValue = String(result);
+  const raw = operate(operator, firstNumber, Number(displayValue));
+  if (raw === null) {
+    resetCalculator();
+    return;
+  }
+  displayValue = String(roundResult(raw));
   display.value = displayValue;
   firstNumber = null;
   operator = null;
-  waitingForSecondNumber = true;       // next digit starts a new calculation
+  waitingForSecondNumber = true;
 });
 
+function resetCalculator() {
+  displayValue = '0';
+  display.value = displayValue;
+  firstNumber = null;
+  operator = null;
+  waitingForSecondNumber = false;
+}
 
 document.querySelector('.clear').addEventListener('click', function () {
   displayValue = '0';
